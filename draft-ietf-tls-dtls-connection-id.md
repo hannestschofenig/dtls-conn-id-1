@@ -216,13 +216,13 @@ protected records. {{new-cid-content-types}} shows the record types to use:
 The CID value, when present, is included in the MAC calculation for the DTLS record. It is created as follows: 
 
 ~~~~
-      MAC(MAC_write_key, DTLSCompressed.epoch +
-                            DTLSCompressed.sequence_number +
-                            DTLSCompressed.type +
-                            DTLSCompressed.version +
-                            DTLSCompressed.cid +      // New input
-                            DTLSCompressed.length +
-                            DTLSCompressed.fragment);
+      MAC(MAC_write_key, epoch +
+                         sequence_number +
+                         type +
+                         version +
+                         cid +      // New input
+                         length +
+                         fragment);
    where "+" denotes concatenation.
 ~~~~
 
